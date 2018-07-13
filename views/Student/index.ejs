@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='../css/style.css' />
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .jumbotron {
+          margin-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/create">Create Student</a></h3>
+     <!-- <h1>Student List</h1>
+      <% if(Student.length>0) { %>
+     
+      <thead>
+          <tr>
+            <th>Student Name</th>
+            
+          </tr>
+        </thead>-->
+        <table class="list-table"></table>
+        <tbody>
+          <% for(var i=0; i<Student.length;i++) { %>
+            <tr>
+              <td><a href="/student/show/<%= Student[i]._id%>"><%= Student[i].name%></a></td>
+              <td><%= Student[i].std_roll%></td>
+            </tr>
+          <% } %>
+        </tbody>
+    
+      <% } else { %>
+        <div>No Student found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

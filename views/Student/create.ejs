@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Student</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/student/show">Student List</a></h3>
+      <h1>Create New Student</h1>
+      <form action="/student/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+              <td>Roll</td>
+              <td><input type="text" name="roll" /></td>
+            </tr>
+            <!--<tr>
+              <td>Salary</td>
+              <td><input type="number" name="salary" /></td>
+            </tr>-->
+            <tr>
+              <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    
+  </body>
+</html>
